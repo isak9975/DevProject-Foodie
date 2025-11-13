@@ -19,16 +19,16 @@ DevProject-Foodie는 팀원과 함께 **학습 목적으로 진행하는 첫 풀
 ---
 
 ## 프로젝트 구조
-DevProject-Foodie/
-├─ client/ # React 프론트엔드
-├─ server/ # Node.js + Express 백엔드
-│ ├─ controllers/ # 요청 처리 로직
-│ ├─ services/ # 비즈니스 로직 / DB 처리
-│ ├─ models/ # 데이터 구조 객체
-│ ├─ routes/ # 라우팅
-│ └─ app.js # 서버 진입점
-└─ README.md
-
+DevProject-Foodie/  
+├─ client/ # React 프론트엔드  
+├─ server/ # Node.js + Express 백엔드  
+│ ├─ controllers/ # 요청 처리 로직  
+│ ├─ services/ # 비즈니스 로직 / DB 처리  
+│ ├─ models/ # 데이터 구조 객체  
+│ ├─ routes/ # 라우팅  
+│ └─ app.js # 서버 진입점  
+└─ README.md  
+  
 ---
 
 ## 개발 목표
