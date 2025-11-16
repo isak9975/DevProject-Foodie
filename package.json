@@ -1,10 +1,22 @@
 {
+  "private": true,
   "devDependencies": {
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
-  "dev-client": "npm run dev --prefix front",  
-  "dev-server": "node server/app.js",           
-  "dev": "npm-run-all --parallel dev-client dev-server"  
-}
+    "__comment1": "이 스크립트는 루트의 npm install을 실행 후 postinstall훅을 이용해 front/server install을 순차적으로 실행",
+
+    "postinstall": "npm-run-all install:front install:server",
+
+    "install:front": "cd front && npm install",
+    "install:server": "cd server && npm install",
+
+    "dev-client": "npm run dev --prefix front",
+    "dev-server": "node server/app.js",
+    
+    "__comment2": "이 스크립트는 루트에서 front/server 서버를 순차적으로 실행",
+    "dev": "npm-run-all --parallel dev-client dev-server"
+
+    
+  }
 }
