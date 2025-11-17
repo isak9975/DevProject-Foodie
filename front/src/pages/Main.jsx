@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import reactLogo from '../assets/react.svg'
+import viteLogo from '../../public/vite.svg'
+import '../App.css'
 
 //메인화면이 될 예정
-function App() {
+function Main() {
   const [count, setCount] = useState(0)
 
   return (
@@ -33,4 +33,4 @@ function App() {
   )
 }
 
-export default App
+export default Main
