@@ -17,18 +17,21 @@ function Main() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+
+        
       </div>
+
       <h1>우와 프로젝트다</h1>
+
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
+
       {/* 간단한 정보를 공유 하기 위한 장소 */}
       <Notice />
+
     </>
   )
 }
