@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.RestaurantComponent{
+  width: 500px;
+  height: 150px;
+  border: 1px solid;
+}
