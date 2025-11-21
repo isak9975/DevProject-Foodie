@@ -3,6 +3,7 @@ import reactLogo from '../assets/react.svg'
 import viteLogo from '../assets/vite.svg'
 import '../App.css'
 import Notice from './Notice'
+import RestaurantList from './RestaurantList'
 
 //메인화면이 될 예정
 function Main() {
@@ -31,7 +32,8 @@ function Main() {
 
       {/* 간단한 정보를 공유 하기 위한 장소 */}
       <Notice />
-
+      
+      <RestaurantList/>
     </>
   )
 }
