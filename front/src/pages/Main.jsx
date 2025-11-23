@@ -7,34 +7,22 @@ import RestaurantList from './RestaurantList'
 
 //메인화면이 될 예정
 function Main() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div>
       <div>
-        <a href="https://vite.dev" target="_blank">
+        <a target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-
-        
       </div>
 
-      <h1>우와 프로젝트다</h1>
+      <h1>맛집 탐색 프로젝트</h1>
 
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-
-      {/* 간단한 정보를 공유 하기 위한 장소 */}
-      <Notice />
-      
-      <RestaurantList/>
-    </>
+      <RestaurantList />
+    </div>
   )
 }
 
