@@ -2,7 +2,7 @@ const NoticeComponent = ({ notice }) => {
 
   return (
     //하나의 공지글 컴포넌트
-    <div style={styles.Container}>
+    <div style={styles.container}>
         <div style={styles.title}>{notice.id}. {notice.title}</div>
         <div style={styles.author}>{notice.createdAt} / {notice.author}</div>
         <div dangerouslySetInnerHTML={{ __html: notice.content }}></div>
@@ -11,7 +11,7 @@ const NoticeComponent = ({ notice }) => {
 }
 
 const styles = {
-  Container : {
+  container : {
     border : '1px solid white',
     textAlign : 'left',
     padding : '10px',
