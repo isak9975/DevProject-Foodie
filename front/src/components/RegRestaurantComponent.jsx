@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-
+{/* 맛집 정보를 입력받는 컴포넌트 */}
 function RegRestaurantComponent(props){
     const restList = props.restList;
     const setRestList = props.setRestList;
@@ -14,15 +14,18 @@ function RegRestaurantComponent(props){
     const addRestList = () => {
         let rest = {};
         const today = new Date();
-        rest.id = num; 
-        rest.name = restName;
-        rest.writer = writer;
-        rest.location = location;
-        rest.style = style;
-        rest.regDate = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
+        rest.id = num;              // 식당 id 
+        rest.name = restName;       // 식당 이름
+        rest.writer = writer;       // 글 작성자
+        rest.location = location;   // 식당 위치
+        rest.style = style;         // 식당 구분(한식, 중식, ...)
+        rest.regDate = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;   // 등록일
         setRestList([...restList, rest]);
 
+        // 식당 id 1 증가
         setNum(num+1);
+
+        // 인풋 초기화
         setRestName("");
         setWriter("");
         setLocation("");
