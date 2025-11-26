@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { GoHome } from "react-icons/go";
 import { FaStickyNote } from "react-icons/fa";
+import { CgBowl } from "react-icons/cg";
 
 //사이드바 컴포넌트
 const SideBar = () => {
@@ -10,6 +11,7 @@ const SideBar = () => {
     const buttons = [
         { id: 1, name: "Main", path: "/", icon: GoHome },
         { id: 2, name: "Notice", path: "/notice", icon: FaStickyNote },
+        { id: 3, name: "Restaurant", path: "/restaurant", icon: CgBowl},
     ]
 
     return (

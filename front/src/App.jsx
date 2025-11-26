@@ -3,6 +3,7 @@ import './App.css'
 import SideBar from './pages/SideBar'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Notice from './pages/Notice'
+import RestaurantList from './pages/RestaurantList'
 
 //라우터 설정 - 페이지 이동을 도와주는 컴포넌트
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/notice" element={<Notice />} />
+            <Route path="/restaurant" element={<RestaurantList/>}/>
           </Routes>
         </div>
       </div>
