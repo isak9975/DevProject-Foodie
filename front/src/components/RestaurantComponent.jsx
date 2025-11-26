@@ -1,5 +1,7 @@
 import React from "react";
 
+
+// 한 맛집의 정보를 담은 컴포넌트 
 function RestaurantComponent(props){
     const rest = props.rest;
     console.log("props")
