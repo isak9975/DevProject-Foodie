@@ -3,7 +3,6 @@ import reactLogo from '../assets/react.svg'
 import viteLogo from '../assets/vite.svg'
 import '../App.css'
 import Notice from './Notice'
-import RestaurantList from './RestaurantList'
 
 //메인화면이 될 예정
 function Main() {
@@ -21,7 +20,6 @@ function Main() {
 
       <h1>맛집 탐색 프로젝트</h1>
 
-      <RestaurantList />
     </div>
   )
 }
