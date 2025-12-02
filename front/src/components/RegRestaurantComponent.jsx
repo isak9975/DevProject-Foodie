@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 {/* 맛집 정보를 입력받는 컴포넌트 */}
 function RegRestaurantComponent(props){
@@ -59,9 +59,21 @@ function RegRestaurantComponent(props){
                     </tr>
                     <tr>
                         <td><label>구분: </label></td>
-                        <td><input type="text" value={style} onChange={(event) => {
+                        {/* <td><input type="text" value={style} onChange={(event) => {
                             setStyle(event.target.value);
-                        }}></input></td>
+                        }}></input></td> */}
+                        <td>
+                            <select value={style} className="select" onChange={(event) => {
+                                setStyle(event.target.value);
+                            }}>
+                                <option value={""}>----------선택----------</option>
+                                <option value={"korean"}>한식</option>
+                                <option value={"chinese"}>중식</option>
+                                <option value={"japanese"}>일식</option>
+                                <option value={"american"}>양식</option>
+                                <option value={"etc"}>기타</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                          <td><button onClick={addRestList}>등록</button></td>
