@@ -1,9 +1,10 @@
 import express from "express";
+import*as noticeController from "../controllers/NoticeController"
 
 const router = express.Router();
 
-router.get("/",(req,res)=>{
-    res.send("Notice Root");
-});
+//api 주소 연결
+router.get("/",noticeController.findAll);
+router.post("/",noticeController.create)
 
 export default router;

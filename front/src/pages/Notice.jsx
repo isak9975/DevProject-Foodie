@@ -5,9 +5,19 @@ import NoticeComponent from "../components/NoticeComponent";
 
 //간단한 정보를 공유 하기 위한 장소 
 const Notice = () => {
-    const [edit, setEdit] = useState(false);
     const now = new Date();
+    //편집모드 상태
+    const [edit, setEdit] = useState(false);
+    //백엔드 통신 데이터 객체
+    const [formData,setFormData] = useState({
+        id:"",
+        author:"",
+        title:"",
+        createdAt:"",
+        content:"",
+    });
 
+    //임시 데이터
     const notices = [
         {
             id: 1,
@@ -38,7 +48,7 @@ const Notice = () => {
                 <div style={styles.title}>Notice Page</div>
                 <button onClick={() => { setEdit(!edit) }}>작성하기</button>
             </div>
-            {/* 보기보드 */}
+            {/* 보기모드 */}
             {!edit && <div style={styles.body}>
                 {notices.map(notice => (
                     <NoticeComponent key={notice.id} notice={notice} />
@@ -49,15 +59,21 @@ const Notice = () => {
                 <div>아직 미구현</div>
                 <div style={styles.titleContainer}>
                     <div>글 작성하기</div>
-                    <button>완료</button>
+                    <button
+                        onClick={()=>{}}
+                    >완료</button>
                 </div>
                 <div>
                     <label>제목 </label>
-                    <input />
+                    <input value={formData.title}
+                        onChange={e=>setFormData(prev=>({...prev,title:e.target.value}))}
+                    />
                 </div>
                 <div>
                     <label>작성자 </label>
-                    <input />
+                    <input value={formData.author}
+                        onChange={e=>setFormData(prev=>({...prev,author:e.target.value}))}
+                    />
                 </div>
                 <div>
                     <label>작성일 </label>
@@ -67,8 +83,10 @@ const Notice = () => {
 
                 <ReactQuill
                     style={{ width: '250px', height: '100px' }}
-                    modules={{ toolbar: false }} />
-
+                    modules={{ toolbar: false }} 
+                    value={formData.content}
+                    onChange={e=>setFormData(prev=>({...prev,content:e.target.value}))}
+                />
             </div>}
         </div>
     )
